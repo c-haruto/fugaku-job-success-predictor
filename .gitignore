@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Claude Codeのローカル状態ファイル（プロジェクトの成果物ではない）
+.claude/
+
+# F-DATAの生parquet（サイズが大きいためリポジトリに含めない）
+# 学習済みモデル一式（src/models/）はサイズが小さいため、
+# ダウンロード・再学習なしでアプリをすぐ動かせるよう意図的に追跡対象に含める
+data/raw/*.parquet

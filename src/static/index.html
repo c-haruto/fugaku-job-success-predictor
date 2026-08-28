@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>冨岳ジョブ成功率予測</title>
+<link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <img src="/assets/images/logo.png" alt="" class="logo">
+    <div>
+      <h1>冨岳ジョブ成功率予測</h1>
+      <p class="subtitle">投入前の条件から、ジョブが成功する確率を推定します</p>
+    </div>
+  </header>
+
+  <main>
+    <form id="predict-form">
+      <table class="form-table">
+        <tr>
+          <th><label for="n_nodes">ノード数</label></th>
+          <td>
+            <input type="number" id="n_nodes" name="n_nodes" min="1" max="200000" value="4" required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="elapse_hours">要求経過時間上限（時間）</label></th>
+          <td>
+            <input type="number" id="elapse_hours" name="elapse_hours" min="0.5" max="200" step="0.5" value="3" required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="freq_req">要求周波数</label></th>
+          <td>
+            <select id="freq_req" name="freq_req" required></select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="submit_dow">投入予定曜日</label></th>
+          <td>
+            <select id="submit_dow" name="submit_dow">
+              <option value="0">月</option>
+              <option value="1">火</option>
+              <option value="2">水</option>
+              <option value="3">木</option>
+              <option value="4">金</option>
+              <option value="5">土</option>
+              <option value="6">日</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="submit_hour">投入予定時刻</label></th>
+          <td>
+            <select id="submit_hour" name="submit_hour"></select>
+            <span class="unit">時</span>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="mem_limit_gib">メモリ上限（GiB・任意）</label></th>
+          <td>
+            <input type="number" id="mem_limit_gib" name="mem_limit_gib" min="0.1" max="256" step="0.5" placeholder="未指定なら上限なし">
+            <p class="hint">空欄の場合は「メモリ上限を指定しない」ジョブとして扱います。</p>
+          </td>
+        </tr>
+      </table>
+
+      <button type="submit">成功確率を予測する</button>
+    </form>
+
+    <section id="result" class="result hidden">
+      <h2>予測結果</h2>
+      <p class="prob" id="result-prob">--</p>
+      <div class="bar-outer"><div class="bar-inner" id="result-bar"></div></div>
+      <p class="message" id="result-message"></p>
+    </section>
+
+    <section id="error" class="error hidden"></section>
+  </main>
+
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

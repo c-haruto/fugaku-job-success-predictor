@@ -1,0 +1,186 @@
+/* シンプルで実務ツールらしい、装飾を抑えた配色・レイアウト */
+
+:root {
+  --text: #262626;
+  --muted: #737373;
+  --border: #d4d4d4;
+  --bg: #ffffff;
+  --bg-alt: #f7f7f5;
+  --accent: #404040;
+  --success: #2e7d32;
+  --failure: #b3261e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-alt);
+  color: var(--text);
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+main {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-table th {
+  text-align: left;
+  vertical-align: top;
+  font-weight: normal;
+  color: var(--text);
+  padding: 10px 12px 10px 0;
+  width: 38%;
+  white-space: normal;
+}
+
+.form-table td {
+  padding: 8px 0;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg);
+  color: var(--text);
+  width: 100%;
+  max-width: 220px;
+}
+
+.unit {
+  margin-left: 6px;
+  color: var(--muted);
+}
+
+.hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 420px;
+}
+
+button[type="submit"] {
+  margin-top: 18px;
+  font: inherit;
+  font-size: 15px;
+  padding: 9px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #262626;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.result {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.result h2 {
+  font-size: 15px;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.prob {
+  font-size: 34px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.prob.success { color: var(--success); }
+.prob.failure { color: var(--failure); }
+
+.bar-outer {
+  margin-top: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #e5e9ef;
+  overflow: hidden;
+}
+
+.bar-inner {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+}
+
+.message {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 20px;
+  padding: 12px 14px;
+  border: 1px solid var(--failure);
+  background: #fdecea;
+  color: var(--failure);
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
