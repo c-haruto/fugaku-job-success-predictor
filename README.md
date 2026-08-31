@@ -301,6 +301,12 @@ uvicorn src.main:app --reload
 
 ## ライセンス・出典
 
-- データセット: F-DATA (Antici et al., *Scientific Data*, 2025),
-  Zenodo DOI: [10.5281/zenodo.11467483](https://doi.org/10.5281/zenodo.11467483)
+- データセット: F-DATA (Antici, F., Bartolini, A., Domke, J., Kiziltan, Z.,
+  Yamamoto, K., *Scientific Data*, 2025)、
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) のもとで
+  Zenodoに公開されている（DOI:
+  [10.5281/zenodo.11467483](https://doi.org/10.5281/zenodo.11467483)）。
+  本アプリはこのデータセットを用いて学習しており、`data/sample.csv` に
+  前処理後の特徴量の一部（500件、匿名化・数値変換済みで元データの
+  識別情報は含まない）を再配布している。
 - 参考リポジトリ: https://github.com/francescoantici/F-DATA
