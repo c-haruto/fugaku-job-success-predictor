@@ -4,18 +4,136 @@ theme: default
 paginate: true
 size: 16:9
 style: |
+  :root {
+    --ink: #262626;
+    --muted: #737373;
+    --accent: #0F766E;
+    --line: #E5E5E5;
+    --panel: #F7F7F5;
+  }
+  section {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: #ffffff;
+    padding: 64px 76px;
+    border-top: 6px solid var(--accent);
+  }
+  section.lead {
+    border-top: none;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .title-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    position: absolute;
+    inset: 0;
+  }
+  .title-text {
+    padding: 64px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .title-image p {
+    margin: 0;
+    position: absolute;
+    inset: 0;
+  }
+  .title-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   section.lead h1 {
-    color: #404040;
+    color: var(--ink);
+    font-size: 2.1em;
+    margin-bottom: 0.2em;
+    padding-bottom: 0.35em;
+    border-bottom: 5px solid var(--accent);
+    display: inline-block;
+  }
+  section.lead p {
+    color: var(--muted);
+    font-size: 1.05em;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: 0.8em;
+    margin-bottom: 0.6em;
+  }
+  .github-badge {
+    display: inline-block;
+    margin-top: 1.4em;
+    padding: 0.4em 0.9em;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 0.75em;
+    color: var(--muted);
+  }
+  .github-badge a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1.5em;
+    color: var(--ink);
+    padding-left: 0.5em;
+    border-left: 8px solid var(--accent);
+    margin-bottom: 0.9em;
+  }
+  ul {
+    line-height: 1.7;
+  }
+  li strong {
+    color: var(--accent);
+  }
+  li::marker {
+    color: var(--accent);
+  }
+  pre {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--accent);
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+  section::after {
+    color: var(--muted);
   }
 ---
 
 <!-- _class: lead -->
 
-# 富岳ジョブ成功率予測Webアプリ
+<div class="title-grid">
+<div class="title-text">
+
+<div class="eyebrow">FUGAKU JOB SUCCESS PREDICTOR</div>
+
+# 富岳ジョブ成功率<br>予測Webアプリ
 
 ジョブを投入する前に、成功確率をニューラルネットワークで予測する
 
-GitHub: https://github.com/c-haruto/fugaku-job-success-predictor
+<div class="github-badge">GitHub: <a href="https://github.com/c-haruto/fugaku-job-success-predictor">c-haruto/fugaku-job-success-predictor</a></div>
+
+</div>
+<div class="title-image">
+
+![](assets/fugaku.jpg)
+
+</div>
+</div>
 
 <!--
 発表者メモ:
@@ -34,19 +152,13 @@ GitHub: https://github.com/c-haruto/fugaku-job-success-predictor
 
 ---
 
-## 【3】技術説明 ①: データとニューラルネットワーク
+## 【3】技術説明 ①: ニューラルネットワークの仕組み
 
-- **使用データ**: F-DATA（Antici et al., *Scientific Data*, 2025）
-  富岳の実ジョブ実行ログ、Zenodoで公開。約37ヶ月分・約2500万件を学習に使用
-- **モデル**: 多層パーセプトロン（MLP）による二値分類（成功/失敗）
+**使用データ**: F-DATA（富岳の実ジョブ実行ログ、約37ヶ月分・約2500万件）を学習に使用。多層パーセプトロン（MLP）による二値分類（成功/失敗）
 
-```
-入力層          隠れ層1        隠れ層2        出力層
-(特徴量8個) → (64ユニット) → (32ユニット) → (1ユニット)
-                 + ReLU         + ReLU        + シグモイド → 成功確率(0〜1)
-```
+![w:1050](assets/nn_diagram.svg)
 
-- 正解とのズレ（損失）を誤差逆伝播法で計算し、重みを少しずつ調整して学習
+正解とのズレ（損失）を誤差逆伝播法で計算し、重みを少しずつ調整して学習する
 
 ---
 
@@ -74,11 +186,6 @@ GitHub: https://github.com/c-haruto/fugaku-job-success-predictor
 
 ## 【5】感想
 
-<!--
-ここは発表者ご自身の感想を記入してください。例:
-・大変だった点 / 工夫した点 / やってみて分かったこと / 今後やってみたいこと
--->
-
-- （記入してください）
-
-ご清聴ありがとうございました
+- 実際にR-CCSを訪れた経験を、このWebアプリの制作に活かせたことが楽しかった
+- 直近の生の運用データも学習に使いたかったが、匿名化が期間内に間に合わず実現できなかった
+- データの性質上の限界はあるものの、富岳の運用状況は急変することがあるため、今後はそれにインタラクティブに対応できるようなアプリへと発展させたいと思った
