@@ -1,5 +1,5 @@
 """
-冨岳ジョブ成功率予測Webアプリ バックエンド（FastAPI）。
+富岳ジョブ成功率予測Webアプリ バックエンド（FastAPI）。
 
 起動方法:
     uvicorn src.main:app --reload
@@ -21,7 +21,7 @@ from .inference import Predictor, now_hour_dow
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
-app = FastAPI(title="冨岳ジョブ成功率予測")
+app = FastAPI(title="富岳ジョブ成功率予測")
 
 _predictor: Predictor | None = None
 

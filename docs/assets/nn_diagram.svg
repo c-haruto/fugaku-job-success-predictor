@@ -1,0 +1,154 @@
+<svg viewBox="0 0 1320 520" xmlns="http://www.w3.org/2000/svg" font-family="Hiragino Kaku Gothic ProN, Yu Gothic, Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#0F766E"/>
+    </marker>
+  </defs>
+
+  <!-- connections: input(5) -> hidden1(6) -->
+  <g stroke="#D4D4D4" stroke-width="1.2" fill="none">
+    <!-- input y: 70,160,250,340,430 x=140 -->
+    <!-- hidden1 y: 70,142,214,286,358,430 x=460 -->
+  </g>
+
+  <!-- lines drawn via script-like manual list -->
+  <g stroke="#D9D9D6" stroke-width="1.2">
+    <!-- input(140, [70,160,250,340,430]) -> hidden1(460, [70,142,214,286,358,430]) -->
+    <line x1="140" y1="70"  x2="460" y2="70"/>
+    <line x1="140" y1="70"  x2="460" y2="142"/>
+    <line x1="140" y1="70"  x2="460" y2="214"/>
+    <line x1="140" y1="70"  x2="460" y2="286"/>
+    <line x1="140" y1="70"  x2="460" y2="358"/>
+    <line x1="140" y1="70"  x2="460" y2="430"/>
+
+    <line x1="140" y1="160" x2="460" y2="70"/>
+    <line x1="140" y1="160" x2="460" y2="142"/>
+    <line x1="140" y1="160" x2="460" y2="214"/>
+    <line x1="140" y1="160" x2="460" y2="286"/>
+    <line x1="140" y1="160" x2="460" y2="358"/>
+    <line x1="140" y1="160" x2="460" y2="430"/>
+
+    <line x1="140" y1="250" x2="460" y2="70"/>
+    <line x1="140" y1="250" x2="460" y2="142"/>
+    <line x1="140" y1="250" x2="460" y2="214"/>
+    <line x1="140" y1="250" x2="460" y2="286"/>
+    <line x1="140" y1="250" x2="460" y2="358"/>
+    <line x1="140" y1="250" x2="460" y2="430"/>
+
+    <line x1="140" y1="340" x2="460" y2="70"/>
+    <line x1="140" y1="340" x2="460" y2="142"/>
+    <line x1="140" y1="340" x2="460" y2="214"/>
+    <line x1="140" y1="340" x2="460" y2="286"/>
+    <line x1="140" y1="340" x2="460" y2="358"/>
+    <line x1="140" y1="340" x2="460" y2="430"/>
+
+    <line x1="140" y1="430" x2="460" y2="70"/>
+    <line x1="140" y1="430" x2="460" y2="142"/>
+    <line x1="140" y1="430" x2="460" y2="214"/>
+    <line x1="140" y1="430" x2="460" y2="286"/>
+    <line x1="140" y1="430" x2="460" y2="358"/>
+    <line x1="140" y1="430" x2="460" y2="430"/>
+  </g>
+
+  <g stroke="#D9D9D6" stroke-width="1.2">
+    <!-- hidden1(460, [70,142,214,286,358,430]) -> hidden2(780, [70,160,250,340,430]) -->
+    <line x1="460" y1="70"  x2="780" y2="70"/>
+    <line x1="460" y1="70"  x2="780" y2="160"/>
+    <line x1="460" y1="70"  x2="780" y2="250"/>
+    <line x1="460" y1="70"  x2="780" y2="340"/>
+    <line x1="460" y1="70"  x2="780" y2="430"/>
+
+    <line x1="460" y1="142" x2="780" y2="70"/>
+    <line x1="460" y1="142" x2="780" y2="160"/>
+    <line x1="460" y1="142" x2="780" y2="250"/>
+    <line x1="460" y1="142" x2="780" y2="340"/>
+    <line x1="460" y1="142" x2="780" y2="430"/>
+
+    <line x1="460" y1="214" x2="780" y2="70"/>
+    <line x1="460" y1="214" x2="780" y2="160"/>
+    <line x1="460" y1="214" x2="780" y2="250"/>
+    <line x1="460" y1="214" x2="780" y2="340"/>
+    <line x1="460" y1="214" x2="780" y2="430"/>
+
+    <line x1="460" y1="286" x2="780" y2="70"/>
+    <line x1="460" y1="286" x2="780" y2="160"/>
+    <line x1="460" y1="286" x2="780" y2="250"/>
+    <line x1="460" y1="286" x2="780" y2="340"/>
+    <line x1="460" y1="286" x2="780" y2="430"/>
+
+    <line x1="460" y1="358" x2="780" y2="70"/>
+    <line x1="460" y1="358" x2="780" y2="160"/>
+    <line x1="460" y1="358" x2="780" y2="250"/>
+    <line x1="460" y1="358" x2="780" y2="340"/>
+    <line x1="460" y1="358" x2="780" y2="430"/>
+
+    <line x1="460" y1="430" x2="780" y2="70"/>
+    <line x1="460" y1="430" x2="780" y2="160"/>
+    <line x1="460" y1="430" x2="780" y2="250"/>
+    <line x1="460" y1="430" x2="780" y2="340"/>
+    <line x1="460" y1="430" x2="780" y2="430"/>
+  </g>
+
+  <g stroke="#0F766E" stroke-opacity="0.55" stroke-width="1.4">
+    <!-- hidden2(780, [70,160,250,340,430]) -> output(1080, 250) -->
+    <line x1="780" y1="70"  x2="1080" y2="250"/>
+    <line x1="780" y1="160" x2="1080" y2="250"/>
+    <line x1="780" y1="250" x2="1080" y2="250"/>
+    <line x1="780" y1="340" x2="1080" y2="250"/>
+    <line x1="780" y1="430" x2="1080" y2="250"/>
+  </g>
+
+  <!-- input layer nodes -->
+  <g fill="#FFFFFF" stroke="#737373" stroke-width="2">
+    <circle cx="140" cy="70"  r="17"/>
+    <circle cx="140" cy="160" r="17"/>
+    <circle cx="140" cy="250" r="17"/>
+    <circle cx="140" cy="340" r="17"/>
+    <circle cx="140" cy="430" r="17"/>
+  </g>
+
+  <!-- hidden1 nodes -->
+  <g fill="#FFFFFF" stroke="#737373" stroke-width="2">
+    <circle cx="460" cy="70"  r="17"/>
+    <circle cx="460" cy="142" r="17"/>
+    <circle cx="460" cy="214" r="17"/>
+    <circle cx="460" cy="286" r="17"/>
+    <circle cx="460" cy="358" r="17"/>
+    <circle cx="460" cy="430" r="17"/>
+  </g>
+
+  <!-- hidden2 nodes -->
+  <g fill="#FFFFFF" stroke="#737373" stroke-width="2">
+    <circle cx="780" cy="70"  r="17"/>
+    <circle cx="780" cy="160" r="17"/>
+    <circle cx="780" cy="250" r="17"/>
+    <circle cx="780" cy="340" r="17"/>
+    <circle cx="780" cy="430" r="17"/>
+  </g>
+
+  <!-- output node -->
+  <circle cx="1080" cy="250" r="22" fill="#0F766E" stroke="#0F766E" stroke-width="2"/>
+
+  <!-- arrow to result box -->
+  <line x1="1106" y1="250" x2="1160" y2="250" stroke="#0F766E" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- result callout -->
+  <rect x="1165" y="215" width="140" height="70" rx="4" fill="#F7F7F5" stroke="#0F766E" stroke-width="1.5"/>
+  <text x="1235" y="242" font-size="15" fill="#737373" text-anchor="middle">成功確率</text>
+  <text x="1235" y="268" font-size="24" font-weight="700" fill="#0F766E" text-anchor="middle">XX%</text>
+
+  <!-- layer titles (top) -->
+  <text x="140" y="28" font-size="20" font-weight="700" fill="#262626" text-anchor="middle">入力層</text>
+  <text x="460" y="28" font-size="20" font-weight="700" fill="#262626" text-anchor="middle">隠れ層1</text>
+  <text x="780" y="28" font-size="20" font-weight="700" fill="#262626" text-anchor="middle">隠れ層2</text>
+  <text x="1080" y="28" font-size="20" font-weight="700" fill="#262626" text-anchor="middle">出力層</text>
+
+  <!-- layer subtitles (bottom) -->
+  <text x="140" y="475" font-size="16" fill="#737373" text-anchor="middle">特徴量 8個</text>
+  <text x="460" y="475" font-size="16" fill="#737373" text-anchor="middle">64ユニット</text>
+  <text x="460" y="497" font-size="16" fill="#737373" text-anchor="middle">+ ReLU</text>
+  <text x="780" y="475" font-size="16" fill="#737373" text-anchor="middle">32ユニット</text>
+  <text x="780" y="497" font-size="16" fill="#737373" text-anchor="middle">+ ReLU</text>
+  <text x="1080" y="475" font-size="16" fill="#737373" text-anchor="middle">1ユニット</text>
+  <text x="1080" y="497" font-size="16" fill="#737373" text-anchor="middle">+ シグモイド</text>
+</svg>

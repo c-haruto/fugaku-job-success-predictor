@@ -161,7 +161,7 @@ EXCLUDED_UNSTABLE_COLUMNS = ["jobenv_req"]
 # jid（ジョブID）は単なる識別子で予測に有用な情報を含まない。
 EXCLUDED_AMBIGUOUS_COLUMNS = ["embedding", "jnam", "jid"]
 
-# usr（投入ユーザーの匿名化ID）は使わない。F-DATAの匿名化IDは実際の冨岳の
+# usr（投入ユーザーの匿名化ID）は使わない。F-DATAの匿名化IDは実際の富岳の
 # ユーザー名とは対応しておらず、実際の利用者が本アプリに自分のIDを入力しても
 # 何の恩恵も受けられない（実運用上意味を持たない特徴量になってしまう）ため、
 # 特徴量にもUI入力にも含めていない。詳細は docs/feature_leakage.md を参照。

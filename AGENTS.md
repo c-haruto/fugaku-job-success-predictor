@@ -18,7 +18,7 @@
 
 - 特徴量の安全性（投入前情報のみを使っているか）は `src/config.py` の `SAFE_RAW_COLUMNS` / `LEAKED_COLUMNS` 一覧と `docs/feature_leakage.md` を人間が確認済み。
 - 実データでの学習結果（`docs/training_report.md` 記載の Accuracy / Precision / Recall / F1 / ROC-AUC、混同行列）は F-DATA のほぼ全期間（2021年4月〜2024年4月、37ファイル）を用いた検証結果ですが、それでも予測性能には限界があります。詳細は `docs/training_report.md` と `docs/feature_leakage.md` を参照してください。
-- 本アプリはあくまでプロトタイプ／教育目的のデモであり、実際の冨岳ジョブ運用における意思決定に使うことは想定していません。
+- 本アプリはあくまでプロトタイプ／教育目的のデモであり、実際の富岳ジョブ運用における意思決定に使うことは想定していません。
 
 ## 再現方法
 

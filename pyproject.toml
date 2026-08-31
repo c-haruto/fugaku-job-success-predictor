@@ -1,7 +1,7 @@
 [project]
 name = "fugaku-job-success-predictor"
 version = "0.1.0"
-description = "冨岳ジョブ投入前の成功率をNNで予測するWebアプリ"
+description = "富岳ジョブ投入前の成功率をNNで予測するWebアプリ"
 requires-python = ">=3.10"
 dependencies = [
     "fastapi>=0.115",
